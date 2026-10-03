@@ -16,7 +16,7 @@ export const DEFAULT_LOCALE: Locale = "zh";
 
 export const TRANSLATIONS = {
   zh: {
-    "app.name": "Composite_map",
+    "app.name": "CompositeMap",
     "nav.browse": "浏览",
     "nav.health": "健康度",
     "nav.graph": "图谱",
@@ -166,7 +166,7 @@ export const TRANSLATIONS = {
     "wiki_link.relation_tooltip": "关系：{relation}",
     "wiki_link.open_source": "打开来源页面 →",
 
-    "home.subtitle": "欢迎使用 Composite_map",
+    "home.subtitle": "欢迎使用 CompositeMap",
     "home.open_root": "打开根索引完整页面 →",
     "home.empty_msg": "wiki/ 目录还是空的。打开 Claude Code 触发 /kb-ingest 摄入第一篇资料试试。",
     "home.overview": "概览",
@@ -373,7 +373,7 @@ export const TRANSLATIONS = {
     // ========== /learn 教学演示页 ==========
     "learn.title": "知识库 ingest 全流程演示",
     "learn.subtitle": "看一份文件如何在 10 步内从 raw/ 走到你的知识库",
-    "learn.intro.lead": "这页演示的是 Composite_map 的「工作机制本身」，不是教某个领域的知识——下面用一份 RAG 奠基论文做载体，但这 10 步流程对任何领域的资料（合同、病历、财报、调研笔记……）都一模一样。跟着走一遍，看一份文件如何被转换、阅读、消化、关联，最终成为知识库里能被精确引用的知识。无须懂 markdown / git / 命令行——所有专业词第一次出现时旁边都有「？」可以点开看 30 秒解释。",
+    "learn.intro.lead": "这页演示的是 CompositeMap 的「工作机制本身」，不是教某个领域的知识——下面用一份 RAG 奠基论文做载体，但这 10 步流程对任何领域的资料（合同、病历、财报、调研笔记……）都一模一样。跟着走一遍，看一份文件如何被转换、阅读、消化、关联，最终成为知识库里能被精确引用的知识。无须懂 markdown / git / 命令行——所有专业词第一次出现时旁边都有「？」可以点开看 30 秒解释。",
     "learn.sample.research": "经典论文",
     "learn.sample.research.subtitle": "Retrieval-Augmented Generation (Lewis et al. 2020)",
     "learn.overview.label": "30 秒看懂",
@@ -474,7 +474,7 @@ export const TRANSLATIONS = {
   },
 
   en: {
-    "app.name": "Composite_map",
+    "app.name": "CompositeMap",
     "nav.browse": "Browse",
     "nav.health": "Health",
     "nav.graph": "Graph",
@@ -625,7 +625,7 @@ export const TRANSLATIONS = {
     "wiki_link.relation_tooltip": "Relation: {relation}",
     "wiki_link.open_source": "Open source page →",
 
-    "home.subtitle": "Welcome to Composite_map",
+    "home.subtitle": "Welcome to CompositeMap",
     "home.open_root": "Open root index full page →",
     "home.empty_msg": "wiki/ is empty. Open Claude Code and run /kb-ingest to ingest your first source.",
     "home.overview": "Overview",
@@ -832,7 +832,7 @@ export const TRANSLATIONS = {
     // ========== /learn teaching demo page ==========
     "learn.title": "Ingest pipeline: file → knowledge base",
     "learn.subtitle": "Watch a file travel from raw/ into your knowledge base in 10 steps",
-    "learn.intro.lead": "This page demonstrates how Composite_map works — it is not a course on any one field. The sample below is a foundational RAG paper, but the same 10 steps apply to material from any domain (contracts, medical records, financial reports, field notes…). Follow along to watch a file get converted, read, digested, and linked until it becomes precisely-citable knowledge in your wiki. No markdown/git/CLI experience needed — every technical term has a clickable ? for a 30-second explanation.",
+    "learn.intro.lead": "This page demonstrates how CompositeMap works — it is not a course on any one field. The sample below is a foundational RAG paper, but the same 10 steps apply to material from any domain (contracts, medical records, financial reports, field notes…). Follow along to watch a file get converted, read, digested, and linked until it becomes precisely-citable knowledge in your wiki. No markdown/git/CLI experience needed — every technical term has a clickable ? for a 30-second explanation.",
     "learn.sample.research": "Landmark paper",
     "learn.sample.research.subtitle": "Retrieval-Augmented Generation (Lewis et al. 2020)",
     "learn.overview.label": "30-second overview",

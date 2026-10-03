@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 // Next.js 约定：app/icon.tsx 自动出 favicon，无需 favicon.ico 文件。
-// 设计：暗底白字 "C"（Composite_map），32×32 浏览器 tab 图标。
+// 设计：暗底白字 "C"（CompositeMap），32×32 浏览器 tab 图标。
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 

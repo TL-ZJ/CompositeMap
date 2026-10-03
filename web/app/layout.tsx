@@ -5,7 +5,7 @@ import { PopoverProvider } from "@/lib/popover-context";
 import { getServerLocale, getServerShowSelfRefs } from "@/lib/server-locale";
 
 export const metadata: Metadata = {
-  title: "Composite_map",
+  title: "CompositeMap",
   description: "知识库管理台 / Knowledge Base Console",
 };
 

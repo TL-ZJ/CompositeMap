@@ -1,4 +1,4 @@
-# Composite_map — 调试控制台（debug-console）
+# CompositeMap — 调试控制台（debug-console）
 
 > ⚠️ **已废弃（deprecated）**：由 `tools/m2a-console/`（UR×KB 解释环 + KB×M2A 执行环两个界面）取代。本目录仅保留作历史参考，不再维护；新入口见 `tools/m2a-console/`。
 

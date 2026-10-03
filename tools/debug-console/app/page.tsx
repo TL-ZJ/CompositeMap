@@ -157,7 +157,7 @@ export default function Page() {
           <span className="ml-auto flex items-center gap-2">
             <span>{t("header.bar_opensource")}</span>
             <span className="text-[var(--line-2)]">·</span>
-            <span className="text-[var(--paper-dim)]">Composite_map</span>
+            <span className="text-[var(--paper-dim)]">CompositeMap</span>
           </span>
         </div>
       </header>

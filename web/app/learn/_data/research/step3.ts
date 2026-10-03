@@ -59,7 +59,7 @@ const recallMechanismMarkdown: Localized = {
 
 ### 为什么不直接上 embedding 召回？
 
-CLAUDE.md 原则 4「严禁 embedding」是刻意取舍（也正好与本文主题呼应——RAG 用 embedding 做召回，而 Composite_map 刻意不用）：
+CLAUDE.md 原则 4「严禁 embedding」是刻意取舍（也正好与本文主题呼应——RAG 用 embedding 做召回，而 CompositeMap 刻意不用）：
 
 - 引入 embedding = 切片粒度 + 向量库 + 模型版本一致性 + 持续维护成本
 - 在「完整页面优先」（原则 3）前提下，**LLM 自身的语义理解能在阅读时补足 BM25 召回的精度劣势**
@@ -87,7 +87,7 @@ Of the 5 layers, ② (multi-query) and ⑤ (multi read-section) are naturally co
 
 ### Why not just use embedding retrieval?
 
-CLAUDE.md principle 4 ("no embeddings") is a deliberate trade-off (and it nicely echoes this very topic — RAG uses embeddings for retrieval, while Composite_map deliberately does not):
+CLAUDE.md principle 4 ("no embeddings") is a deliberate trade-off (and it nicely echoes this very topic — RAG uses embeddings for retrieval, while CompositeMap deliberately does not):
 
 - Adding embeddings = chunk granularity + a vector store + model-version consistency + ongoing maintenance cost
 - Given "whole pages first" (principle 3), **the LLM's own semantic understanding can make up for BM25's precision gap at read time**

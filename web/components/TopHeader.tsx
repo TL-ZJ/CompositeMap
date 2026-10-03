@@ -7,7 +7,7 @@ import { WorkspaceSwitcher } from "@/components/WorkspaceSwitcher";
 import { useT } from "@/lib/i18n-client";
 
 /**
- * 顶部全局 header（Composite_map 标题 + 主导航 + workspace 切换 + 设置菜单）。
+ * 顶部全局 header（CompositeMap 标题 + 主导航 + workspace 切换 + 设置菜单）。
  *
  * 同时被 (shell)/layout.tsx 与 health/layout.tsx 使用，确保 wiki 浏览页与
  * 健康度仪表板共享同一条顶栏，避免子路由"凭空消失顶栏"导致用户找不到回路。

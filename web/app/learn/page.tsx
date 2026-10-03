@@ -24,6 +24,6 @@ export default function LearnPage() {
 }
 
 export const metadata = {
-  title: "教学演示 / Learn — Composite_map",
+  title: "教学演示 / Learn — CompositeMap",
   description: "看一份原始文件如何在 10 步内变成知识库里的可引用知识",
 };
