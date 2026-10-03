@@ -1,0 +1,25 @@
+{
+  "name": "m2a-console",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CompositeMap M2A 客户端子项目 — UR×KB 解释环 + KB×M2A 执行环（复用 debug-console 的 LLM 管线，不破 CLAUDE.md 原则 1）",
+  "scripts": {
+    "dev": "next dev -p 3200",
+    "build": "next build",
+    "start": "next start -p 3200",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.2.18",
+    "openai": "^4.71.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,130 @@
+# 私人数据默认不进开源仓库（与 CLAUDE.md「my_thoughts/raw 默认不进开源仓库」一致）。
+# 注意：.gitignore 只阻止「未来」提交，不会移除「历史」里已提交的旧顶层 raw/wiki/my_thoughts——
+# 历史清理是人工步骤（git filter-repo / BFG）。
+#
+# 多 workspace 数据层（按主题隔离）——忽略内容，但用 .gitkeep 保留空目录骨架，
+# 让 fresh clone 的每个库都带 raw/ 与 my_thoughts/ 占位（用户知道往哪放数据）。
+workspaces/*/raw/*
+!workspaces/*/raw/.gitkeep
+workspaces/*/my_thoughts/*
+!workspaces/*/my_thoughts/.gitkeep
+workspaces/*/.cache/
+workspaces/*/exports/
+#
+# 个人 IP workspace —— 整库（含 wiki）均为作者个人/商业敏感资料，
+# 整体不进这个准备开源的引擎 repo，仅本地保存（用户指定，2026-06-17）
+workspaces/ip/
+#
+# 个人工作/草稿 workspace —— 截图/PPT/临时脚本/私人绝对路径，非项目内容，不进开源仓
+workspaces/问题分析/
+workspaces/程序报错/
+workspaces/添加功能/
+workspaces/papers/
+#
+# 运行时日志（dev server / console 生成，含本地绝对路径，不进仓）
+*.log
+#
+# RAG 对照实验基线：源码（compare.py/deck.js/*.workflow.js/expand_corpus.py）与结果
+# （results_*.{json,md}、expand_report.txt）入库以便复现；但 embedding 缓存（约 190MB *.npy）
+# 与 deck 渲染产物（pdf/pptx/slide 图）属派生层，可由脚本重建——不入库（与「源进派生出」一致）。
+workspaces/*/rag_baseline/cache/
+workspaces/*/rag_baseline/*.npy
+workspaces/*/rag_baseline/*.pdf
+workspaces/*/rag_baseline/*.pptx
+workspaces/*/rag_baseline/slide-*.jpg
+#
+# 旧的扁平顶层布局（workspace 迁移前遗留；新结构不再使用，但防止误提交）
+/raw/
+/my_thoughts/
+/exports/
+# 顶层散落的原始资料（应放在 workspaces/<name>/raw/ 下，那里已被忽略）——
+# 防止 git add . 把受版权的原始论文/文章误提交进公开仓。
+/papers/
+/articles/
+#
+# 作者私人/非公开文档（商业策略、个人语境讨论等——绝不进开源仓）
+/开源策略讨论.md
+/开源策略*.md
+#
+# 杂物：根级 Node 工程（pptxgenjs/sharp 等，与 CompositeMap 引擎无关，疑为其他任务遗留）——不进开源仓
+# 引擎的前端工程在 web/，本根级 package.json 非项目组成部分
+/package.json
+/package-lock.json
+
+# 派生索引（可从 markdown 全量重建）
+.cache/
+
+# wiki 大纲缓存（派生层：k.py 按 doc_chars 判新鲜、过期即现场重建——不入库。
+# raw/ 下的 outline.json 已随上方 raw 规则整体排除，这里只需覆盖 wiki）
+workspaces/*/wiki/**/*.outline.json
+/wiki/**/*.outline.json
+
+# 本地烟测临时目录
+.tmp/
+
+# Claude Code 源码副本（仅供架构借鉴参考，不属于知识库本身）
+claude_code源码/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.tsbuildinfo
+
+# Web 前端 / Node（通用 + web 专项）
+node_modules/
+.next/
+web/.next/
+web/node_modules/
+web/out/
+web/.turbo/
+
+# 调试控制台（独立子项目；详见 tools/debug-console/）
+tools/debug-console/.next/
+tools/debug-console/node_modules/
+tools/debug-console/out/
+
+# M2A 控制台（独立子项目；详见 tools/m2a-console/）
+tools/m2a-console/.next/
+tools/m2a-console/node_modules/
+tools/m2a-console/out/
+# 运行时状态与交换文件（循环状态 + 备料/回流 .md）不入库
+tools/m2a-console/data/
+
+# 敏感文件 — 防 token / private key 误 commit（项目当前不依赖任何 .env，
+# 但 Next.js 默认会加载 .env*；列在这里作为预防）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Playwright CLI 临时快照（人工 UI 巡检产出，非源码）
+.playwright-cli/
+
+# 发布筹备内部产物（绝不进公开仓；防 git add -A 误入库）
+/RELEASE_PREP_REPORT.md
+*_PREP_REPORT.md
+.claude/*.lock
+
+# 大文件请使用 Git LFS
+# raw/assets/*.pdf
